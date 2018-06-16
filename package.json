@@ -1,0 +1,23 @@
+{
+  "name": "accessibilityform",
+  "version": "1.0.0",
+  "description": "## Repo for setting up Responsive Accessible Form",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TMolano/AccessibilityForm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TMolano/AccessibilityForm/issues"
+  },
+  "homepage": "https://github.com/TMolano/AccessibilityForm#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
