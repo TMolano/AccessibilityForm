@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-<h1>Order Form</h1>
+
 <div id="container">
 
 <div class="order-form">
@@ -37,7 +37,7 @@
 
 <div class="order-form">
 <h2>Shipping Details</h2>
-    <form id="shipping-details">
+    <form id="shipping-details" action="#">
         <p class="required"> = required fields</p>
         <label for="fullname" class="required">Full Name</label>
         <input id="fullname" type="text" pattern="[A-Za-z ]+" minlength="2" maxlength="100" required/>
@@ -390,11 +390,37 @@
         <p id="shippingCountry"></p>
     </address>
 
-    <button type=submit id="complete-order">Place Order</button>
+    <button type=submit id="submit-order">Place Order</button>
 </div>
 
+</div>
+
+<div id = order-complete>
+
+    <h2>Order Complete</h2>
+    <div id="summary-complete">
+
+        <p class="product-item"></p>
+        <p>Shipping</p>
+        <p>Free</p>
+        <p>Total</p>
+        <p>$20.00</p>
+
+    </div>
+    <h3>Shipping Address</h3>
+    <address>
+        <p id="shippingName2"></p>
+        <p id="shippingAddress2"></p>
+        <p id="shippingCity2"><p>
+        <p id="shippingSt2"></p>
+        <p id="shippingZip2"></p>
+        <p id="shippingCountry2"></p>
+    </address>
+
+    <img src="img-resource/circle-check.svg">
 </div>
 
 <script src="js/index.js"></script>
+<!-- <script src="js/validation.js"></script> -->
 </body>
 </html>

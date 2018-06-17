@@ -5,19 +5,6 @@ body {
   body button {
     cursor: pointer; }
 
-div {
-  display: flex;
-  width: 85%; }
-
-#container {
-  margin: 0 auto;
-  height: 500px;
-  box-shadow: 10px 10px 20px grey; }
-
-#price {
-  text-align: right;
-  margin-right: 5%; }
-
 h1 {
   text-align: center; }
 
@@ -29,6 +16,80 @@ h2 {
 h3 {
   margin: 0;
   margin-left: 5%; }
+
+div {
+  display: flex;
+  width: 85%; }
+
+form {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+  form input, form select {
+    width: 90%;
+    margin: 5px; }
+  form input:nth-child(10) {
+    width: 50%; }
+  form select:nth-child(12) {
+    width: 50%; }
+  form input:nth-child(14) {
+    width: 50%; }
+  form select:nth-child(16) {
+    width: 50%; }
+
+label.required::before, p.required::before {
+  content: '*';
+  margin-right: 4px;
+  color: red; }
+
+p.required {
+  font-style: italic;
+  text-align: center; }
+
+#container {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 500px;
+  box-shadow: 10px 10px 20px grey; }
+
+#price {
+  text-align: right;
+  margin-right: 5%; }
+
+#order-complete {
+  display: none;
+  margin: 0 auto;
+  background: whitesmoke;
+  box-shadow: 10px 10px 20px grey;
+  width: 25%; }
+  #order-complete address {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto; }
+    #order-complete address p {
+      margin: 0.1rem;
+      width: 100%; }
+      #order-complete address p:nth-of-type(2) {
+        width: 100%; }
+      #order-complete address p:nth-of-type(3) {
+        width: fit-content; }
+      #order-complete address p:nth-of-type(4) {
+        width: fit-content; }
+      #order-complete address p:nth-of-type(5) {
+        width: fit-content; }
+      #order-complete address p:nth-of-type(6) {
+        width: fit-content; }
+  #order-complete img {
+    display: block;
+    margin: 0 auto;
+    padding: 2rem; }
 
 .order-form {
   display: flex;
@@ -76,13 +137,11 @@ h3 {
     #summary p:nth-of-type(1) {
       width: 100%; }
   #summary div:nth-of-type(1) {
-    border: 2px solid purple;
     padding: 0;
     width: 100%; }
     #summary div:nth-of-type(1) p {
       width: fit-content; }
   #summary div:nth-of-type(2) {
-    border: 2px solid purple;
     width: 100%; }
     #summary div:nth-of-type(2) p {
       width: 50%; }
@@ -125,42 +184,15 @@ h3 {
   #color button:nth-child(4) {
     background: black; }
 
-form {
-  width: 90%;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column; }
-  form input, form select {
-    width: 90%;
-    margin: 5px; }
-  form input:nth-child(10) {
-    width: 50%; }
-  form select:nth-child(12) {
-    width: 50%; }
-  form input:nth-child(14) {
-    width: 50%; }
-  form select:nth-child(16) {
-    width: 50%; }
-
-#complete-order {
-  background: lightgreen;
-  width: 90%;
-  height: 50px;
-  margin: 0 auto;
-  display: block; }
-
 .size-active {
   background: gold; }
 
 .color-active {
   border: 3px solid gold; }
 
-label.required::before, p.required::before {
-  content: '*';
-  margin-right: 4px;
-  color: red; }
-
-p.required {
-  font-style: italic;
-  text-align: center; }
+#submit-order {
+  background: lightgreen;
+  width: 90%;
+  height: 50px;
+  margin: 0 auto;
+  display: block; }
