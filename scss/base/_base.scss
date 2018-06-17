@@ -1,0 +1,78 @@
+html {
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  button {
+    cursor: pointer;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  width: fit-content;
+  margin-left: 5px;
+  height: fit-content;
+}
+
+h3 {
+  margin: 0;
+  margin-left: 5%;
+
+}
+
+div {
+  display: flex;
+  width: 85%;
+}
+
+form {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+
+  input, select {
+    width: 90%;
+    margin: 5px;
+  }
+
+  input:nth-child(10){
+    width: 50%;
+
+  }
+  select:nth-child(12){
+    width: 50%;
+
+  }
+  input:nth-child(14){
+    width: 50%;
+
+  }
+
+  select:nth-child(16){
+    width: 50%;
+
+  }
+
+}
+
+label.required::before, p.required::before {
+  content: '*';
+  margin-right: 4px;
+  color: red;
+}
+
+p.required{
+  font-style: italic;
+  text-align: center;
+}

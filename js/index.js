@@ -54,11 +54,14 @@ var item = document.getElementsByClassName('product-item');
 
 item[0].innerHTML = "Incredibles T-Shirt";
 item[1].innerHTML = item[0].innerHTML;
+item[2].innerHTML = item[0].innerHTML;
 let values = [item[0].innerHTML,'',''];
+
 
 
 function updateSummary(){
     item[1].innerHTML = values.join(' ');
+    item[2].innerHTML = values.join(' ');
 }
 
 var fName = document.getElementById("fullname");
@@ -116,8 +119,8 @@ document.getElementById("email").addEventListener("blur", checkEmail);
 
 function checkEmail() {
 
-    var email = document.getElementById('email');
-    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    let email = document.getElementById('email');
+    let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
     if (!filter.test(email.value)) {
 
@@ -126,3 +129,21 @@ function checkEmail() {
 }
 
 
+var submit = document.getElementById('submit-order');
+
+submit.addEventListener("click", function () {
+
+    var form = document.getElementById('shipping-details');
+    form.submit();
+
+    var container = document.getElementById('container');
+    container.style.display = "none";
+    document.getElementById('order-complete').style.display = "block";
+    document.getElementById('shippingName2').innerHTML = fName.value;
+    document.getElementById('shippingAddress2').innerHTML = address.value;
+    document.getElementById('shippingCity2').innerHTML = city.value + ",";
+    document.getElementById('shippingSt2').innerHTML = state.value;
+    document.getElementById('shippingZip2').innerHTML = zip.value;
+    document.getElementById('shippingCountry2').innerHTML = country.value;
+
+});

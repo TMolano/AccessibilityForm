@@ -1,0 +1,10 @@
+/* @mixin mx($mx) {
+  @if $mx == "mobile" {
+    @media (min-width: 320px ){@content}
+  }
+  @else if $mx == "pc" {
+    @media (min-width: 1440px){@content}
+  }
+}
+
+*/
