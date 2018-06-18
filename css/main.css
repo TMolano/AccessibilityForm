@@ -91,6 +91,24 @@ p.required {
     margin: 0 auto;
     padding: 2rem; }
 
+#summary-complete {
+  width: 90%;
+  margin: 0 auto; }
+  #summary-complete p {
+    width: 50%;
+    margin-bottom: 0.5rem; }
+    #summary-complete p:nth-of-type(1) {
+      width: 100%; }
+  #summary-complete div:nth-of-type(1) {
+    padding: 0;
+    width: 100%; }
+    #summary-complete div:nth-of-type(1) p {
+      width: fit-content; }
+  #summary-complete div:nth-of-type(2) {
+    width: 100%; }
+    #summary-complete div:nth-of-type(2) p {
+      width: 50%; }
+
 .order-form {
   display: flex;
   flex-direction: column;
@@ -192,7 +210,10 @@ p.required {
 
 #submit-order {
   background: lightgreen;
-  width: 90%;
-  height: 50px;
+  width: 10rem;
+  height: 2rem;
   margin: 0 auto;
-  display: block; }
+  display: block;
+  position: absolute;
+  left: 770px;
+  bottom: 30px; }

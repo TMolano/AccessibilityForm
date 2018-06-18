@@ -136,14 +136,18 @@ submit.addEventListener("click", function () {
     var form = document.getElementById('shipping-details');
     form.submit();
 
-    var container = document.getElementById('container');
-    container.style.display = "none";
-    document.getElementById('order-complete').style.display = "block";
-    document.getElementById('shippingName2').innerHTML = fName.value;
-    document.getElementById('shippingAddress2').innerHTML = address.value;
-    document.getElementById('shippingCity2').innerHTML = city.value + ",";
-    document.getElementById('shippingSt2').innerHTML = state.value;
-    document.getElementById('shippingZip2').innerHTML = zip.value;
-    document.getElementById('shippingCountry2').innerHTML = country.value;
+    form.addEventListener("submit", function () {
+        var container = document.getElementById('container');
+        container.style.display = "none";
+        document.getElementById('order-complete').style.display = "block";
+        document.getElementById('order-complete').style.flexDirection = "column";
+        document.getElementById('order-complete').style.flexWrap = "wrap";
+        document.getElementById('shippingName2').innerHTML = fName.value;
+        document.getElementById('shippingAddress2').innerHTML = address.value;
+        document.getElementById('shippingCity2').innerHTML = city.value + ",";
+        document.getElementById('shippingSt2').innerHTML = state.value;
+        document.getElementById('shippingZip2').innerHTML = zip.value;
+        document.getElementById('shippingCountry2').innerHTML = country.value;
+    })
 
 });
