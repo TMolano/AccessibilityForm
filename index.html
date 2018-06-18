@@ -11,42 +11,42 @@
 
 <div class="order-form">
 
-    <h2 class="product-item"></h2>
+    <h2 class="product-item" aria-label="Incredibles T-Shirt" tabindex="0"></h2>
 
     <div id="product">
-    <img src="https://lumiere-a.akamaihd.net/v1/images/file_0da4ff14.jpeg?width=1200&region=0%2C0%2C2000%2C2000" alt="Incredibles T-Shirt ">
+    <img src="https://lumiere-a.akamaihd.net/v1/images/file_0da4ff14.jpeg?width=1200&region=0%2C0%2C2000%2C2000" alt="Incredibles T-Shirt " tabindex="0">
     </div>
 
-    <h3 id="price">$20.00</h3>
+    <h3 id="price" tabindex="0">$20.00</h3>
 
-    <h3>Select a Size</h3>
+    <h3 tabindex="0">Select a Size</h3>
     <div id="size">
-        <button class="size-button" type="button" value="Small">S</button>
-        <button class="size-button" type="button" value="Medium">M</button>
-        <button class="size-button" type="button" value="Large">L</button>
+        <button class="size-button" type="button" value="Small" aria-label="Size Small" aria-selected="false" >S</button>
+        <button class="size-button" type="button" value="Medium" aria-label="Size Medium" aria-selected="false">M</button>
+        <button class="size-button" type="button" value="Large" aria-label="Size Large" aria-selected="false">L</button>
     </div>
 
-    <h3>Select a Color</h3>
+    <h3 tabindex="0">Select a Color</h3>
     <div id="color">
-        <button class="color-button" type="button" value="Red">Red</button>
-        <button class="color-button" type="button" value="Blue">Blue</button>
-        <button class="color-button" type="button" value="Green">Green</button>
-        <button class="color-button" type="button" value="Black">Black</button>
+        <button class="color-button" type="button" value="Red" aria-selected="false">Red</button>
+        <button class="color-button" type="button" value="Blue" aria-selected="false">Blue</button>
+        <button class="color-button" type="button" value="Green" aria-selected="false">Green</button>
+        <button class="color-button" type="button" value="Black" aria-selected="false">Black</button>
     </div>
 </div>
 
 <div class="order-form">
-<h2>Shipping Details</h2>
-    <form id="shipping-details" action="#">
+<h2 tabindex="0">Shipping Details</h2>
+    <form id="shipping-details">
         <p class="required"> = required fields</p>
         <label for="fullname" class="required">Full Name</label>
         <input id="fullname" type="text" pattern="[A-Za-z ]+" minlength="2" maxlength="100" required/>
 
         <label for="email" class="required">Email</label>
-        <input id="email" type="email" pattern="" required/>
+        <input id="email" type="email" required/>
 
         <label for="address" class="required">Address</label>
-        <input id="address" type="text" pattern="[a-zA-Z0-9 ]+" required/>
+        <input id="address" type="text" pattern="[a-zA-Z0-9-. ]+" required/>
 
         <label for="address2">Address 2</label>
         <input id="address2" type="text" pattern="[a-zA-Z0-9 ]+"/>
@@ -365,13 +365,13 @@
             <option value="ZW">Zimbabwe</option>
         </select>
 
-
+        <button type=submit id="submit-order">Place Order</button>
     </form>
 </div>
 
 <div class="order-form">
-<h2>Order Summary</h2>
-    <div id="summary">
+<h2 tabindex="0">Order Summary</h2>
+    <div tabindex="0" id="summary">
 
         <p class="product-item"></p>
         <p>Shipping</p>
@@ -380,8 +380,8 @@
         <p>$20.00</p>
 
     </div>
-    <h3>Shipping Address</h3>
-    <address>
+    <h3 tabindex="0">Shipping Address</h3>
+    <address tabindex="0">
         <p id="shippingName"></p>
         <p id="shippingAddress"></p>
         <p id="shippingCity"><p>
@@ -390,15 +390,15 @@
         <p id="shippingCountry"></p>
     </address>
 
-    <button type=submit id="submit-order">Place Order</button>
-</div>
 
 </div>
 
-<div id = order-complete>
+</div>
 
-    <h2>Order Complete</h2>
-    <div id="summary-complete">
+<div id=order-complete>
+
+    <h2 tabindex="0">Order Complete</h2>
+    <div id="summary-complete" tabindex="0">
 
         <p class="product-item"></p>
         <p>Shipping</p>
@@ -407,8 +407,8 @@
         <p>$20.00</p>
 
     </div>
-    <h3>Shipping Address</h3>
-    <address>
+    <h3 tabindex="0">Shipping Address</h3>
+    <address tabindex="0">
         <p id="shippingName2"></p>
         <p id="shippingAddress2"></p>
         <p id="shippingCity2"><p>
@@ -417,7 +417,7 @@
         <p id="shippingCountry2"></p>
     </address>
 
-    <img src="img-resource/circle-check.svg">
+    <img src="img-resource/circle-check.svg" alt="order complete checkmark image">
 </div>
 
 <script src="js/index.js"></script>
