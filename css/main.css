@@ -55,7 +55,7 @@ p.required {
   left: 0;
   bottom: 0;
   right: 0;
-  height: 500px;
+  height: 600px;
   box-shadow: 10px 10px 20px grey; }
 
 #price {
@@ -68,46 +68,26 @@ p.required {
   background: whitesmoke;
   box-shadow: 10px 10px 20px grey;
   width: 25%; }
-  #order-complete address {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    margin: 0 auto; }
-    #order-complete address p {
-      margin: 0.1rem;
+  #order-complete p {
+    margin: 0.1rem;
+    width: 100%; }
+    #order-complete p:nth-of-type(2) {
       width: 100%; }
-      #order-complete address p:nth-of-type(2) {
-        width: 100%; }
-      #order-complete address p:nth-of-type(3) {
-        width: fit-content; }
-      #order-complete address p:nth-of-type(4) {
-        width: fit-content; }
-      #order-complete address p:nth-of-type(5) {
-        width: fit-content; }
-      #order-complete address p:nth-of-type(6) {
-        width: fit-content; }
+    #order-complete p:nth-of-type(3) {
+      width: fit-content; }
+    #order-complete p:nth-of-type(4) {
+      width: fit-content; }
+    #order-complete p:nth-of-type(5) {
+      width: fit-content; }
+    #order-complete p:nth-of-type(6) {
+      width: fit-content; }
   #order-complete img {
     display: block;
     margin: 0 auto;
     padding: 2rem; }
 
 #summary-complete {
-  width: 90%;
   margin: 0 auto; }
-  #summary-complete p {
-    width: 50%;
-    margin-bottom: 0.5rem; }
-    #summary-complete p:nth-of-type(1) {
-      width: 100%; }
-  #summary-complete div:nth-of-type(1) {
-    padding: 0;
-    width: 100%; }
-    #summary-complete div:nth-of-type(1) p {
-      width: fit-content; }
-  #summary-complete div:nth-of-type(2) {
-    width: 100%; }
-    #summary-complete div:nth-of-type(2) p {
-      width: 50%; }
 
 .order-form {
   display: flex;
@@ -123,22 +103,11 @@ p.required {
     margin: 0 auto; }
   .order-form:nth-child(3) h3 {
     margin-top: 10%; }
-  .order-form:nth-child(3) address {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
+  .order-form:nth-child(3) div:nth-of-type(2) {
     margin: 0 auto;
-    margin-bottom: 8rem; }
-  .order-form:nth-child(3) address p {
-    margin: 0.1rem; }
-    .order-form:nth-child(3) address p:nth-of-type(3) {
-      width: fit-content; }
-    .order-form:nth-child(3) address p:nth-of-type(4) {
-      width: fit-content; }
-    .order-form:nth-child(3) address p:nth-of-type(5) {
-      width: fit-content; }
-    .order-form:nth-child(3) address p:nth-of-type(6) {
-      width: fit-content; }
+    display: block; }
+    .order-form:nth-child(3) div:nth-of-type(2) p {
+      width: 100%; }
 
 #summary {
   display: flex;
@@ -154,6 +123,8 @@ p.required {
     margin-bottom: 0.5rem; }
     #summary p:nth-of-type(1) {
       width: 100%; }
+    #summary p:nth-of-type(4), #summary p:nth-of-type(5) {
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2); }
   #summary div:nth-of-type(1) {
     padding: 0;
     width: 100%; }
@@ -172,41 +143,32 @@ p.required {
     margin: 0 auto;
     width: 100%; }
 
+.product-item {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2); }
+
 #size {
   width: 90%;
   margin: 0 auto;
   margin-bottom: 10px;
   display: flex;
   justify-content: space-evenly; }
-  #size button {
-    width: 75px;
-    height: 40px;
-    border: none;
-    font-size: 1.2rem; }
 
 #color {
-  width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly; }
-  #color button {
-    width: 65px;
-    height: 30px;
-    color: white; }
-  #color button:nth-child(1) {
+  #color label:nth-child(2) {
+    width: 10%;
     background: red; }
-  #color button:nth-child(2) {
+  #color label:nth-child(4) {
+    width: 10%;
     background: blue; }
-  #color button:nth-child(3) {
+  #color label:nth-child(6) {
+    width: 10%;
     background: green; }
-  #color button:nth-child(4) {
+  #color label:nth-child(8) {
+    width: 10%;
     background: black; }
-
-.size-active {
-  background: gold; }
-
-.color-active {
-  border: 3px solid gold; }
 
 #submit-order {
   background: lightgreen;

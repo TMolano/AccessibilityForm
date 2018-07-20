@@ -4,48 +4,30 @@
   margin-bottom: 10px;
   display: flex;
   justify-content: space-evenly;
-
-  button {
-    width: 75px;
-    height: 40px;
-    border: none;
-    font-size: 1.2rem;
-  }
 }
 
 #color {
-  width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
 
-  button {
-    width: 65px;
-    height: 30px;
-    color: white;
-  }
 
-  button:nth-child(1) {
+  label:nth-child(2) {
+    width: 10%;
     background: red;
   }
-  button:nth-child(2) {
+  label:nth-child(4) {
+    width: 10%;
     background: blue;
   }
-  button:nth-child(3) {
+  label:nth-child(6) {
+    width: 10%;
     background: green;
   }
-  button:nth-child(4) {
+  label:nth-child(8) {
+    width: 10%;
     background: black;
   }
-}
-
-.size-active {
-  background: gold;
-}
-
-.color-active {
-  border: 3px solid gold;
-
 }
 
 #submit-order {
