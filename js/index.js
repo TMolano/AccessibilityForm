@@ -127,25 +127,25 @@ email.addEventListener("blur", checkEmail);
     }
 
 
-let submit = document.getElementById('submit-order');
+let submit = document.getElementById("submit-order");
+    
 
 submit.addEventListener("click", function () {
 
-    let form = document.getElementById('shipping-details');
-    //form.submit();
+        let container = document.getElementById("container");
+        let order = document.getElementById("order-complete");
+        container.style.visibility = "hidden";
+        container.style.opacity = "0";
 
-    form.addEventListener("submit", function () {
-        let container = document.getElementById('container');
-        container.style.display = "none";
-        document.getElementById('order-complete').style.display = "block";
-        document.getElementById('order-complete').style.flexDirection = "column";
-        document.getElementById('order-complete').style.flexWrap = "wrap";
-        document.getElementById('shippingName2').innerHTML = fName.value;
-        document.getElementById('shippingAddress2').innerHTML = address.value;
-        document.getElementById('shippingCity2').innerHTML = city.value + ",";
-        document.getElementById('shippingSt2').innerHTML = state.value;
-        document.getElementById('shippingZip2').innerHTML = zip.value;
-        document.getElementById('shippingCountry2').innerHTML = country.value;
-    })
+        order.style.visibility = "visible";
+        order.style.opacity = "1";
+        order.style.display = "block";
+        order.style.flexDirection = "column";
+        order.style.flexWrap = "wrap";
+        document.getElementById('completeName').innerHTML = fName.value;
+        document.getElementById('completeAddress').innerHTML = address.value;
+        document.getElementById('completeAddress2').innerHTML = address2.value;
+        document.getElementById('completeCity').innerHTML = city.value + ", " +  state.value + " " + zip.value;
+        document.getElementById('completeCountry').innerHTML = country.value;
 
 });

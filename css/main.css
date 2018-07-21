@@ -2,24 +2,20 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
-  body button {
-    cursor: pointer; }
 
 h1 {
   text-align: center; }
 
 h2 {
-  width: fit-content;
-  margin-left: 5px;
-  height: fit-content; }
-
-h3 {
-  margin: 0;
-  margin-left: 5%; }
+  margin: 5%; }
 
 div {
   display: flex;
   width: 85%; }
+
+fieldset {
+  width: 85%;
+  margin: 0 auto; }
 
 form {
   width: 90%;
@@ -51,6 +47,8 @@ p.required {
 #container {
   margin: auto;
   position: absolute;
+  opacity: 1;
+  transition: opacity ease-out 2s 2s;
   top: 0;
   left: 0;
   bottom: 0;
@@ -63,34 +61,21 @@ p.required {
   margin-right: 5%; }
 
 #order-complete {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity ease-in 1s 1s;
   margin: 0 auto;
   background: whitesmoke;
   box-shadow: 10px 10px 20px grey;
   width: 25%; }
-  #order-complete p {
-    margin: 0.1rem;
-    width: 100%; }
-    #order-complete p:nth-of-type(2) {
-      width: 100%; }
-    #order-complete p:nth-of-type(3) {
-      width: fit-content; }
-    #order-complete p:nth-of-type(4) {
-      width: fit-content; }
-    #order-complete p:nth-of-type(5) {
-      width: fit-content; }
-    #order-complete p:nth-of-type(6) {
-      width: fit-content; }
   #order-complete img {
     display: block;
     margin: 0 auto;
     padding: 2rem; }
 
-#summary-complete {
-  margin: 0 auto; }
-
 .order-form {
   display: flex;
+  width: 85%;
   flex-direction: column;
   background: whitesmoke; }
   .order-form:nth-of-type(2) {
@@ -101,39 +86,31 @@ p.required {
   .order-form:nth-child(3) p {
     width: 90%;
     margin: 0 auto; }
-  .order-form:nth-child(3) h3 {
-    margin-top: 10%; }
-  .order-form:nth-child(3) div:nth-of-type(2) {
-    margin: 0 auto;
-    display: block; }
-    .order-form:nth-child(3) div:nth-of-type(2) p {
-      width: 100%; }
 
-#summary {
+.shippingInfo:nth-of-type(1), .shippingInfo:nth-of-type(2) {
+  margin: 0 auto;
+  display: block; }
+  .shippingInfo:nth-of-type(1) p, .shippingInfo:nth-of-type(2) p {
+    width: 100%;
+    margin: 0 auto; }
+
+.info:nth-of-type(1), .info:nth-of-type(2) {
   display: flex;
   margin: 0 auto;
   margin-bottom: 20px;
   flex-wrap: wrap;
   width: 90%;
   padding: 0.2rem; }
-  #summary p {
+  .info:nth-of-type(1) p, .info:nth-of-type(2) p {
     display: inline-block;
     width: 50%;
     margin: 0;
     margin-bottom: 0.5rem; }
-    #summary p:nth-of-type(1) {
-      width: 100%; }
-    #summary p:nth-of-type(4), #summary p:nth-of-type(5) {
+    .info:nth-of-type(1) p:nth-of-type(1), .info:nth-of-type(2) p:nth-of-type(1) {
+      width: 100%;
       border-bottom: 2px solid rgba(0, 0, 0, 0.2); }
-  #summary div:nth-of-type(1) {
-    padding: 0;
-    width: 100%; }
-    #summary div:nth-of-type(1) p {
-      width: fit-content; }
-  #summary div:nth-of-type(2) {
-    width: 100%; }
-    #summary div:nth-of-type(2) p {
-      width: 50%; }
+    .info:nth-of-type(1) p:nth-of-type(4), .info:nth-of-type(1) p:nth-of-type(5), .info:nth-of-type(2) p:nth-of-type(4), .info:nth-of-type(2) p:nth-of-type(5) {
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2); }
 
 #product {
   width: 90%;
@@ -142,9 +119,6 @@ p.required {
   #product img {
     margin: 0 auto;
     width: 100%; }
-
-.product-item {
-  border-bottom: 2px solid rgba(0, 0, 0, 0.2); }
 
 #size {
   width: 90%;
