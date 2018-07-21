@@ -7,9 +7,6 @@ body {
   padding: 0;
   box-sizing: border-box;
 
-  button {
-    cursor: pointer;
-  }
 }
 
 h1 {
@@ -17,20 +14,22 @@ h1 {
 }
 
 h2 {
-  width: fit-content;
-  margin-left: 5px;
-  height: fit-content;
+  margin: 5%;
 }
 
 h3 {
-  margin: 0;
-  margin-left: 5%;
 
 }
 
 div {
   display: flex;
   width: 85%;
+}
+
+
+fieldset {
+  width: 85%;
+  margin: 0 auto;
 }
 
 form {

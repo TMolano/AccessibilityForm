@@ -9,73 +9,82 @@
 
 <div id="container">
 
-    <div class="order-form">
+    <section class="order-form">
 
-        <h2 class="product-item" aria-label="Incredibles T-Shirt"></h2>
+        <h1 class="product-item" aria-label="Incredibles T-Shirt"></h1>
 
         <div id="product">
-            <img src="https://lumiere-a.akamaihd.net/v1/images/file_0da4ff14.jpeg?width=1200&region=0%2C0%2C2000%2C2000" alt="Incredibles T-Shirt " tabindex="0">
+            <img src="img-resource/shirt.jpeg"
+                 alt="Incredibles T-Shirt " tabindex="0">
         </div>
 
-        <h3 id="price">$20.00</h3>
+        <h2 id="price">$20.00</h2>
 
         <fieldset>
             <legend>Size</legend>
             <div id="size">
+                <input class="size-button" id="size1" type="radio" name="size" value="Small" aria-label="Size Small"
+                       aria-selected="false" role="radio">
                 <label for="size1">Small</label>
-                <input class="size-button" id="size1" type="radio" name="size" value="Small" aria-label="Size Small" aria-selected="false" role="radio">
 
+                <input class="size-button" id="size2" type="radio" name="size" value="Medium" aria-label="Size Medium"
+                       aria-selected="false" role="radio">
                 <label for="size2">Medium</label>
-                <input class="size-button" id="size2" type="radio" name="size" value="Medium" aria-label="Size Medium" aria-selected="false" role="radio">
 
+                <input class="size-button" id="size3" type="radio" name="size" value="Large" aria-label="Size Large"
+                       aria-selected="false" role="radio">
                 <label for="size3">Large</label>
-                <input class="size-button" id="size3" type="radio" name="size" value="Large" aria-label="Size Large" aria-selected="false" role="radio">
             </div>
         </fieldset>
 
         <fieldset>
             <legend>Color</legend>
             <div id="color">
-                <input class="color-button" id="color1" type="radio" name="color" aria-label="Color Red" value="Red" aria-selected="false" role="radio">
+                <input class="color-button" id="color1" type="radio" name="color" aria-label="Color Red" value="Red"
+                       aria-selected="false" role="radio">
                 <label for="color1"></label>
 
-                <input class="color-button" id="color2" type="radio" name="color" aria-label="Color Blue" value="Blue" aria-selected="false" role="radio">
+                <input class="color-button" id="color2" type="radio" name="color" aria-label="Color Blue" value="Blue"
+                       aria-selected="false" role="radio">
                 <label for="color2"></label>
 
-                <input class="color-button" id="color3" type="radio" name="color" aria-label="Color Green" value="Green" aria-selected="false" role="radio">
+                <input class="color-button" id="color3" type="radio" name="color" aria-label="Color Green" value="Green"
+                       aria-selected="false" role="radio">
                 <label for="color3"></label>
 
-                <input class="color-button" id="color4" type="radio" name="color" aria-label="Color Black" value="Black" aria-selected="false" role="radio">
+                <input class="color-button" id="color4" type="radio" name="color" aria-label="Color Black" value="Black"
+                       aria-selected="false" role="radio">
                 <label for="color4"></label>
             </div>
         </fieldset>
-    </div>
-    <div class="order-form">
-        <h2>Shipping Details </h2>
+    </section>
+
+    <section class="order-form">
+        <h1>Shipping Details </h1>
         <form id="shipping-details">
             <p class="required"> = required fields</p>
             <fieldset>
                 <legend>Personal</legend>
                 <label for="fullname" class="required">Full Name</label>
-                <input id="fullname" type="text" pattern="[A-Za-z ]+" minlength="2" maxlength="100" required/>
+                <input id="fullname" type="text" pattern="[A-Za-z ]+" minlength="2" maxlength="100"/>
 
                 <label for="email" class="required">Email</label>
-                <input id="email" type="email" required/>
+                <input id="email" type="email"/>
             </fieldset>
 
             <fieldset>
                 <legend>Location</legend>
                 <label for="address" class="required">Address</label>
-                <input id="address" type="text" pattern="[a-zA-Z0-9-. ]+" required/>
+                <input id="address" type="text" pattern="[a-zA-Z0-9-. ]+"/>
 
                 <label for="address2">Address 2</label>
                 <input id="address2" type="text" pattern="[a-zA-Z0-9 ]+"/>
 
                 <label for="city" class="required">City</label>
-                <input id="city" type="text" pattern="[A-Za-z ]+" required/>
+                <input id="city" type="text" pattern="[A-Za-z ]+"/>
 
                 <label for="state" class="required">State</label>
-                <select id="state" required>
+                <select id="state">
                     <option value=""></option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -130,11 +139,11 @@
                     <option value="WY">Wyoming</option>
                 </select>
 
-                <label for="zip"class="required">Zip</label>
-                <input id="zip" type="text" pattern="[\d]{5}" required/>
+                <label for="zip" class="required">Zip</label>
+                <input id="zip" type="text" pattern="[\d]{5}"/>
 
                 <label for="country" class="required">Country</label>
-                <select id="country" required>
+                <select id="country">
                     <option value=""></option>
                     <option value="AF">Afghanistan</option>
                     <option value="AX">Åland Islands</option>
@@ -388,13 +397,13 @@
                 </select>
             </fieldset>
 
-            <button type=submit id="submit-order">Place Order</button>
+            <button type=button id="submit-order">Place Order</button>
         </form>
-    </div>
+    </section>
 
-    <div class="order-form">
-        <h2>Order Summary</h2>
-        <div id="summary">
+    <section class="order-form">
+        <h1>Order Summary</h1>
+        <div class="info">
 
             <p class="product-item"></p>
             <p>Shipping</p>
@@ -403,24 +412,24 @@
             <p>$20.00</p>
 
         </div>
-        <h3>Shipping Address</h3>
-        <div>
+        <h2>Shipping Address</h2>
+        <div class="shippingInfo">
             <p id="shippingName">Ron Swanson</p>
-            <p id="shippingAddress">123 Cabin Ln.</p>
-            <p id="shippingAddress22"></p>
+            <p id="shippingAddress">Address Unknown</p>
+            <p id="shippingAddress2"></p>
             <p id="shippingCity">Pawnee, IN 34543<p>
             <p id="shippingCountry">US</p>
         </div>
 
 
-    </div>
+    </section>
 
 </div>
 
 <div id=order-complete>
 
-    <h2>Order Complete</h2>
-    <div id="summary-complete">
+    <h1>Order Complete</h1>
+    <div class="info">
 
         <p class="product-item"></p>
         <p>Shipping</p>
@@ -429,15 +438,14 @@
         <p>$20.00</p>
 
     </div>
-    <h3>Shipping Address</h3>
-    <section>
-        <p id="shippingName2"></p>
-        <p id="shippingAddress2"></p>
-        <p id="shippingCity2"><p>
-        <p id="shippingSt2"></p>
-        <p id="shippingZip2"></p>
-        <p id="shippingCountry2"></p>
-    </section>
+    <h2>Shipping Address</h2>
+    <div class="shippingInfo">
+        <p id="completeName"></p>
+        <p id="completeAddress"></p>
+        <p id="completeAddress2"></p>
+        <p id="completeCity"><p>
+        <p id="completeCountry"></p>
+    </div>
 
     <img src="img-resource/circle-check.svg" alt="order complete checkmark image">
 </div>
