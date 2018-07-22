@@ -9,6 +9,7 @@
   right: 0;
   height: 600px;
   box-shadow:10px 10px 20px grey;
+
 }
 
 #price {
@@ -36,19 +37,21 @@
 
 .order-form {
   display: flex;
-  width: 85%;
+  width: 50%;
+  margin: 0 auto;
   flex-direction: column;
   background: whitesmoke;
 
+
   &:nth-of-type(2){
     background: white;
+
   }
 
 }
 
 .order-form:nth-child(3){
-  display: block;
-
+  
   p{
     width: 90%;
     margin: 0 auto;

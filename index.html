@@ -66,25 +66,25 @@
             <fieldset>
                 <legend>Personal</legend>
                 <label for="fullname" class="required">Full Name</label>
-                <input id="fullname" type="text" pattern="[A-Za-z ]+" minlength="2" maxlength="100"/>
+                <input id="fullname" type="text" pattern="[A-Za-z ]+" minlength="2" maxlength="100" required>
 
                 <label for="email" class="required">Email</label>
-                <input id="email" type="email"/>
+                <input id="email" type="email" required>
             </fieldset>
 
             <fieldset>
                 <legend>Location</legend>
                 <label for="address" class="required">Address</label>
-                <input id="address" type="text" pattern="[a-zA-Z0-9-. ]+"/>
+                <input id="address" type="text" pattern="[a-zA-Z0-9-. ]+" required>
 
                 <label for="address2">Address 2</label>
                 <input id="address2" type="text" pattern="[a-zA-Z0-9 ]+"/>
 
                 <label for="city" class="required">City</label>
-                <input id="city" type="text" pattern="[A-Za-z ]+"/>
+                <input id="city" type="text" pattern="[A-Za-z ]+" required>
 
                 <label for="state" class="required">State</label>
-                <select id="state">
+                <select id="state" required>
                     <option value=""></option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -140,10 +140,10 @@
                 </select>
 
                 <label for="zip" class="required">Zip</label>
-                <input id="zip" type="text" pattern="[\d]{5}"/>
+                <input id="zip" type="text" pattern="[\d]{5}" required>
 
                 <label for="country" class="required">Country</label>
-                <select id="country">
+                <select id="country" required>
                     <option value=""></option>
                     <option value="AF">Afghanistan</option>
                     <option value="AX">Åland Islands</option>

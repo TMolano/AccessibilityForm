@@ -75,17 +75,16 @@ p.required {
 
 .order-form {
   display: flex;
-  width: 85%;
+  width: 50%;
+  margin: 0 auto;
   flex-direction: column;
   background: whitesmoke; }
   .order-form:nth-of-type(2) {
     background: white; }
 
-.order-form:nth-child(3) {
-  display: block; }
-  .order-form:nth-child(3) p {
-    width: 90%;
-    margin: 0 auto; }
+.order-form:nth-child(3) p {
+  width: 90%;
+  margin: 0 auto; }
 
 .shippingInfo:nth-of-type(1), .shippingInfo:nth-of-type(2) {
   margin: 0 auto;
