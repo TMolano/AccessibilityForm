@@ -82,7 +82,7 @@ let address2 = document.getElementById("address2");
 
 address2.addEventListener("keyup", function () {
 
-    document.getElementById("shippingAddress22").innerHTML = address2.value;
+    document.getElementById("shippingAddress2").innerHTML = address2.value;
 });
 
 let city = document.getElementById("city");
@@ -112,7 +112,7 @@ country.addEventListener("change", function() {
 
 });
 
-let email = document.getElementById('email');
+let email = document.querySelector('#email');
 email.addEventListener("blur", checkEmail);
 
     function checkEmail() {
@@ -128,24 +128,27 @@ email.addEventListener("blur", checkEmail);
 
 
 let submit = document.getElementById("submit-order");
-    
+let form = document.getElementById("shipping-details");
 
-submit.addEventListener("click", function () {
+       submit.addEventListener("submit", function () {
 
-        let container = document.getElementById("container");
-        let order = document.getElementById("order-complete");
-        container.style.visibility = "hidden";
-        container.style.opacity = "0";
+if(email.validity.typeMismatch){
+    email.setCustomValidity("Custom");
+}
+           let container = document.getElementById("container");
+           let order = document.getElementById("order-complete");
+           container.style.visibility = "hidden";
+           container.style.opacity = "0";
 
-        order.style.visibility = "visible";
-        order.style.opacity = "1";
-        order.style.display = "block";
-        order.style.flexDirection = "column";
-        order.style.flexWrap = "wrap";
-        document.getElementById('completeName').innerHTML = fName.value;
-        document.getElementById('completeAddress').innerHTML = address.value;
-        document.getElementById('completeAddress2').innerHTML = address2.value;
-        document.getElementById('completeCity').innerHTML = city.value + ", " +  state.value + " " + zip.value;
-        document.getElementById('completeCountry').innerHTML = country.value;
+           order.style.visibility = "visible";
+           order.style.opacity = "1";
+           order.style.display = "block";
+           order.style.flexDirection = "column";
+           order.style.flexWrap = "wrap";
+           document.getElementById('completeName').innerHTML = fName.value;
+           document.getElementById('completeAddress').innerHTML = address.value;
+           document.getElementById('completeAddress2').innerHTML = address2.value;
+           document.getElementById('completeCity').innerHTML = city.value + ", " + state.value + " " + zip.value;
+           document.getElementById('completeCountry').innerHTML = country.value;
 
-});
+       });
