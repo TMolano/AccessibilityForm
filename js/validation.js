@@ -43,7 +43,7 @@ class checkValidity {
 
 /*submitted.addEventListener("click", (event) => {
 
-    event.preventDefault();
+    //event.preventDefault();
 
     if(validZip.validity.patternMismatch){
         validZip.setCustomValidity("Must be a 5 digit code.");
