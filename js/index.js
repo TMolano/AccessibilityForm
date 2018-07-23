@@ -127,31 +127,26 @@ email.addEventListener("blur", checkEmail);
     }
 
 
-let submitForm = document.getElementById("submit-order");
 let form = document.getElementById("shipping-details");
+form.onsubmit = function (ev) {
+
+    ev.preventDefault();
+
+    let container = document.getElementById("container");
+    let order = document.getElementById("order-complete");
+    container.style.visibility = "hidden";
+    container.style.opacity = "0";
+
+    order.style.visibility = "visible";
+    order.style.opacity = "1";
+    order.style.display = "block";
+    order.style.flexDirection = "column";
+    order.style.flexWrap = "wrap";
+    document.getElementById('completeName').innerHTML = fName.value;
+    document.getElementById('completeAddress').innerHTML = address.value;
+    document.getElementById('completeAddress2').innerHTML = address2.value;
+    document.getElementById('completeCity').innerHTML = city.value + ", " + state.value + " " + zip.value;
+    document.getElementById('completeCountry').innerHTML = country.value;
 
 
-    form.onsubmit = function (ev) {
-
-        ev.preventDefault();
-
-
-        let container = document.getElementById("container");
-        let order = document.getElementById("order-complete");
-        container.style.visibility = "hidden";
-        container.style.opacity = "0";
-
-        order.style.visibility = "visible";
-        order.style.opacity = "1";
-        order.style.display = "block";
-        order.style.flexDirection = "column";
-        order.style.flexWrap = "wrap";
-        document.getElementById('completeName').innerHTML = fName.value;
-        document.getElementById('completeAddress').innerHTML = address.value;
-        document.getElementById('completeAddress2').innerHTML = address2.value;
-        document.getElementById('completeCity').innerHTML = city.value + ", " + state.value + " " + zip.value;
-        document.getElementById('completeCountry').innerHTML = country.value;
-
-
-    };
-
+};
