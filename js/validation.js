@@ -5,7 +5,6 @@ const validAddress = document.querySelector('#address');
 const validCity = document.querySelector('#city');
 const validZip = document.querySelector('#zip');
 
-
 class checkValidity {
 
     constructor(input, type){
@@ -38,18 +37,18 @@ class checkValidity {
             this.addError('Entry is too long')
         }
 
-        if(!this.input.value.patternMismatch([A-Za-z ])) {
-
-            this.addError("Must only contain letters")
-        }
-
         return this.errors
     }
 }
 
-submitted.addEventListener("click", (event) => {
+/*submitted.addEventListener("click", (event) => {
 
     event.preventDefault();
+
+    if(validZip.validity.patternMismatch){
+        validZip.setCustomValidity("Must be a 5 digit code.");
+    }
+    else {validZip.setCustomValidity("")}
 
     let validateName = new checkValidity(validName, "text");
     let errorMessages = validateName.getMessages();
@@ -62,5 +61,14 @@ submitted.addEventListener("click", (event) => {
             validName.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>')
         })
     }
-    else{alert("Form Submitted")}
+    else{
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+        })
+    }
+
+
 });
+
+*/

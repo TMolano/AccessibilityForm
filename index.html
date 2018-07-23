@@ -19,20 +19,19 @@
         </div>
 
         <h2 id="price">$20.00</h2>
-
         <fieldset>
             <legend>Size</legend>
             <div id="size">
                 <input class="size-button" id="size1" type="radio" name="size" value="Small" aria-label="Size Small"
-                       aria-selected="false" role="radio">
+                       aria-selected="false" role="radio" form="shipping-details" required>
                 <label for="size1">Small</label>
 
                 <input class="size-button" id="size2" type="radio" name="size" value="Medium" aria-label="Size Medium"
-                       aria-selected="false" role="radio">
+                       aria-selected="false" role="radio" form="shipping-details" required>
                 <label for="size2">Medium</label>
 
                 <input class="size-button" id="size3" type="radio" name="size" value="Large" aria-label="Size Large"
-                       aria-selected="false" role="radio">
+                       aria-selected="false" role="radio" form="shipping-details" required>
                 <label for="size3">Large</label>
             </div>
         </fieldset>
@@ -41,19 +40,19 @@
             <legend>Color</legend>
             <div id="color">
                 <input class="color-button" id="color1" type="radio" name="color" aria-label="Color Red" value="Red"
-                       aria-selected="false" role="radio">
+                       aria-selected="false" role="radio" form="shipping-details" required>
                 <label for="color1"></label>
 
                 <input class="color-button" id="color2" type="radio" name="color" aria-label="Color Blue" value="Blue"
-                       aria-selected="false" role="radio">
+                       aria-selected="false" role="radio" form="shipping-details" required>
                 <label for="color2"></label>
 
                 <input class="color-button" id="color3" type="radio" name="color" aria-label="Color Green" value="Green"
-                       aria-selected="false" role="radio">
+                       aria-selected="false" role="radio" form="shipping-details" required>
                 <label for="color3"></label>
 
                 <input class="color-button" id="color4" type="radio" name="color" aria-label="Color Black" value="Black"
-                       aria-selected="false" role="radio">
+                       aria-selected="false" role="radio" form="shipping-details" required>
                 <label for="color4"></label>
             </div>
         </fieldset>
@@ -66,7 +65,7 @@
             <fieldset>
                 <legend>Personal</legend>
                 <label for="fullname" class="required">Full Name</label>
-                <input id="fullname" type="text" pattern="[A-Za-z ]+" minlength="2" maxlength="100" required>
+                <input id="fullname" type="text" pattern="[A-Za-z ]+" minlength="2" maxlength="100"  required>
 
                 <label for="email" class="required">Email</label>
                 <input id="email" type="email" required>
@@ -140,7 +139,7 @@
                 </select>
 
                 <label for="zip" class="required">Zip</label>
-                <input id="zip" type="text" pattern="[\d]{5}" required>
+                <input id="zip" type="text" pattern="[\d]{5}" maxlength="5" required>
 
                 <label for="country" class="required">Country</label>
                 <select id="country" required>
@@ -451,6 +450,6 @@
 </div>
 
 <script src="js/index.js"></script>
-<!-- <script src="js/validation.js"></script> -->
+<script src="js/validation.js"></script>
 </body>
 </html>
