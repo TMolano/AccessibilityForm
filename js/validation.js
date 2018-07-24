@@ -51,6 +51,7 @@ submitted.addEventListener("click", (event) => {
 
 
     let errorMessages = validateName.getMessages();
+    event.preventDefault();
 
     if(validZip.validity.patternMismatch){
         validZip.setCustomValidity("Must be a 5 digit code.");
