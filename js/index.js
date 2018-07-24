@@ -1,7 +1,7 @@
 //Javascript for Color and Size: switching active class to display information
 
-let size = document.getElementById('size');
-let sizeBtns = size.getElementsByClassName('size-button');
+let size = document.getElementById("size");
+let sizeBtns = size.getElementsByClassName("size-button");
 
 
 for (let i = 0; i < sizeBtns.length; i++) {
@@ -16,7 +16,7 @@ for (let i = 0; i < sizeBtns.length; i++) {
         }
         this.classList.add("size-active");
 
-        let sizeSelected = size.getElementsByClassName('size-active')[0].value;
+        let sizeSelected = size.getElementsByClassName("size-active")[0].value;
 
 
         values[1] = ", " + sizeSelected;
@@ -26,8 +26,8 @@ for (let i = 0; i < sizeBtns.length; i++) {
     });
 }
 
-let color = document.getElementById('color');
-let colorBtns = color.getElementsByClassName('color-button');
+let color = document.getElementById("color");
+let colorBtns = color.getElementsByClassName("color-button");
 
 for (let c = 0; c < colorBtns.length; c++) {
     colorBtns[c].addEventListener("click", function() {
@@ -42,7 +42,7 @@ for (let c = 0; c < colorBtns.length; c++) {
 
         this.classList.add("color-active");
 
-        let colorSelected = color.getElementsByClassName('color-active')[0].value;
+        let colorSelected = color.getElementsByClassName("color-active")[0].value;
 
         values[2] = ", " + colorSelected;
         updateSummary();
@@ -51,7 +51,7 @@ for (let c = 0; c < colorBtns.length; c++) {
 }
 
 //Order Information
-let item = document.getElementsByClassName('product-item');
+let item = document.getElementsByClassName("product-item");
 
 item[0].innerHTML = "Incredibles T-Shirt";
 item[1].innerHTML = item[0].innerHTML;
@@ -112,7 +112,7 @@ country.addEventListener("change", function() {
 
 });
 
-let email = document.querySelector('#email');
+let email = document.querySelector("#email");
 email.addEventListener("blur", checkEmail);
 
     function checkEmail() {
@@ -142,11 +142,11 @@ form.onsubmit = function (ev) {
     order.style.display = "block";
     order.style.flexDirection = "column";
     order.style.flexWrap = "wrap";
-    document.getElementById('completeName').innerHTML = fName.value;
-    document.getElementById('completeAddress').innerHTML = address.value;
-    document.getElementById('completeAddress2').innerHTML = address2.value;
-    document.getElementById('completeCity').innerHTML = city.value + ", " + state.value + " " + zip.value;
-    document.getElementById('completeCountry').innerHTML = country.value;
+    document.getElementById("completeName").innerHTML = fName.value;
+    document.getElementById("completeAddress").innerHTML = address.value;
+    document.getElementById("completeAddress2").innerHTML = address2.value;
+    document.getElementById("completeCity").innerHTML = city.value + ", " + state.value + " " + zip.value;
+    document.getElementById("completeCountry").innerHTML = country.value;
 
 
 };
