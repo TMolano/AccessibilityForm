@@ -41,24 +41,31 @@ class checkValidity {
     }
 }
 
-/*submitted.addEventListener("click", (event) => {
+submitted.addEventListener("click", (event) => {
 
-    //event.preventDefault();
+    let validateName = new checkValidity(validName, "text");
+    let validateEmail = new checkValidity(validEmail, "text");
+    let validateCity = new checkValidity(validCity, "text");
+    let validateAddress = new checkValidity(validAddress, "text");
+    let validateZip = new checkValidity(validZip, "text");
+
+
+    let errorMessages = validateName.getMessages();
+    event.preventDefault();
 
     if(validZip.validity.patternMismatch){
         validZip.setCustomValidity("Must be a 5 digit code.");
     }
     else {validZip.setCustomValidity("")}
 
-    let validateName = new checkValidity(validName, "text");
-    let errorMessages = validateName.getMessages();
-
     console.log(errorMessages);
 
     if(errorMessages.length > 0){
 
         errorMessages.forEach((error) => {
-            validName.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>')
+            validName.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>');
+            validZip.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>');
+
         })
     }
     else{
@@ -71,4 +78,4 @@ class checkValidity {
 
 });
 
-*/
+
