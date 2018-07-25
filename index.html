@@ -8,7 +8,7 @@
 <body>
 
 <div id="container">
-
+    <form id="shipping-details">
     <section class="order-form">
 
         <h1 class="product-item">Incredibles T-Shirt</h1>
@@ -23,15 +23,15 @@
             <legend>Size</legend>
             <div id="size">
                 <input class="size-button" id="size1" type="radio" name="size" value="Small" aria-label="Size Small"
-                       aria-selected="false" aria-checked="false" form="shipping-details" required>
+                       aria-selected="false" aria-checked="false" required>
                 <label for="size1">Small</label>
 
                 <input class="size-button" id="size2" type="radio" name="size" value="Medium" aria-label="Size Medium"
-                       aria-selected="false" aria-checked="false" form="shipping-details" required>
+                       aria-selected="false" aria-checked="false" required>
                 <label for="size2">Medium</label>
 
                 <input class="size-button" id="size3" type="radio" name="size" value="Large" aria-label="Size Large"
-                       aria-selected="false" aria-checked="false" form="shipping-details" required>
+                       aria-selected="false" aria-checked="false" required>
                 <label for="size3">Large</label>
             </div>
         </fieldset>
@@ -40,27 +40,27 @@
             <legend>Color</legend>
             <div id="color">
                 <input class="color-button" id="color1" type="radio" name="color" aria-label="Color Red" value="Red"
-                       aria-selected="false" aria-checked="false" form="shipping-details" required>
-                <label for="color1"></label>
+                       aria-checked="false" required>
+                <label for="color1">Red</label>
 
                 <input class="color-button" id="color2" type="radio" name="color" aria-label="Color Blue" value="Blue"
-                       aria-selected="false" aria-checked="false" form="shipping-details" required>
-                <label for="color2"></label>
+                       aria-checked="false" required>
+                <label for="color2">Blue</label>
 
                 <input class="color-button" id="color3" type="radio" name="color" aria-label="Color Green" value="Green"
-                       aria-selected="false" aria-checked="false" form="shipping-details" required>
-                <label for="color3"></label>
+                       aria-checked="false" required>
+                <label for="color3">Green</label>
 
                 <input class="color-button" id="color4" type="radio" name="color" aria-label="Color Black" value="Black"
-                       aria-selected="false" aria-checked="false" form="shipping-details" required>
-                <label for="color4"></label>
+                       aria-checked="false" required>
+                <label for="color4">Black</label>
             </div>
         </fieldset>
     </section>
 
     <section class="order-form">
         <h1>Shipping Details </h1>
-        <form id="shipping-details">
+
             <p class="required"> = required fields</p>
             <fieldset>
                 <legend>Personal</legend>
@@ -77,10 +77,10 @@
                 <input id="address" type="text" pattern="[a-zA-Z0-9-. ]+" required>
 
                 <label for="address2">Address 2</label>
-                <input id="address2" type="text" pattern="[a-zA-Z0-9 ]+"/>
+                <input id="address2" type="text" pattern="[a-zA-Z0-9-. ]+">
 
                 <label for="city" class="required">City</label>
-                <input id="city" type="text" pattern="[A-Za-z ]+" required>
+                <input id="city" type="text" pattern="[a-zA-Z0-9-. ]+" required>
 
                 <label for="state" class="required">State</label>
                 <select id="state" required>
@@ -396,8 +396,6 @@
                 </select>
             </fieldset>
 
-            <button type=submit id="submit-order">Place Order</button>
-        </form>
     </section>
 
     <section class="order-form">
@@ -420,9 +418,9 @@
             <p id="shippingCountry">US</p>
         </div>
 
-
+        <button type=submit id="submit-order">Place Order</button>
     </section>
-
+    </form>
 </div>
 
 <div id=order-complete>

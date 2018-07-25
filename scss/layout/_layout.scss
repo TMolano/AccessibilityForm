@@ -1,20 +1,20 @@
 #container {
-  margin: auto;
+  width: 75%;
+  margin: 0 auto;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 1;
   transition: opacity ease-out 2s 2s;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 600px;
+  height: 700px;
   box-shadow:10px 10px 20px grey;
-
 }
 
 #price {
   text-align: right;
   margin-right: 5%;
+  width: 100%;
 }
 
 #order-complete {
@@ -38,23 +38,24 @@
 .order-form {
   display: flex;
   width: 50%;
-  margin: 0 auto;
-  flex-direction: column;
+  flex-wrap: wrap;
   background: whitesmoke;
-
 
   &:nth-of-type(2){
     background: white;
 
+    fieldset{
+      width: 100%;
+    &:nth-of-type(1), &:nth-of-type(2){
+
+      input, select{
+        width: 90%;
+        margin: .5rem;
+      }
+
+    }
   }
 
-}
-
-.order-form:nth-child(3){
-
-  p{
-    width: 90%;
-    margin: 0 auto;
   }
 
 }
@@ -71,7 +72,6 @@
 .info:nth-of-type(1), .info:nth-of-type(2) {
   display: flex;
   margin: 0 auto;
-  margin-bottom: 20px;
   flex-wrap: wrap;
   width: 90%;
   padding: 0.2rem;
