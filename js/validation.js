@@ -26,6 +26,10 @@ class checkValidity {
 
             this.addError('Entry does not match the field type')
         }
+        if(status.patternMismatch){
+
+            this.addError('Entry does not match the field pattern')
+        }
 
         if(status.tooShort){
 
@@ -50,19 +54,21 @@ submitted.addEventListener("click", (event) => {
     let validateZip = new checkValidity(validZip, "text");
 
 
-    let errorMessages = validateName.getMessages();
+    let errorName = validateName.getMessages();
 
-    if(validZip.validity.patternMismatch){
-        validZip.setCustomValidity("Must be a 5 digit code.");
-    }
-    else {validZip.setCustomValidity("")}
+    if(errorName.length > 0) {
 
-    console.log(errorMessages);
-
-    if(errorMessages.length > 0){
-
-        errorMessages.forEach((error) => {
+        errorName.forEach((error) => {
             validName.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>');
+
+        })
+    }
+
+    let errorZip = validateZip.getMessages();
+
+    if(errorZip.length > 0){
+
+        errorZip.forEach((error) => {
             validZip.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>');
 
         })

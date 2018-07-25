@@ -4,10 +4,19 @@ body {
   box-sizing: border-box; }
 
 h1 {
-  text-align: center; }
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  display: block;
+  height: fit-content; }
 
 h2 {
-  margin: 5%; }
+  margin: 5%;
+  width: 100%;
+  height: fit-content; }
+
+h3 {
+  width: 100%; }
 
 div {
   display: flex;
@@ -15,27 +24,12 @@ div {
 
 fieldset {
   width: 85%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: fit-content; }
 
 form {
-  width: 90%;
-  height: 100%;
-  margin: 0 auto;
   display: flex;
-  flex-direction: column; }
-  form input:valid {
-    border: 2px solid green; }
-  form input, form select {
-    width: 90%;
-    margin: 5px; }
-  form input:nth-child(10) {
-    width: 50%; }
-  form select:nth-child(12) {
-    width: 50%; }
-  form input:nth-child(14) {
-    width: 50%; }
-  form select:nth-child(16) {
-    width: 50%; }
+  margin: 0 auto; }
 
 label.required::before, p.required::before {
   content: '*';
@@ -43,24 +37,28 @@ label.required::before, p.required::before {
   color: red; }
 
 p.required {
+  height: fit-content;
+  margin: 0 auto;
+  width: 100%;
   font-style: italic;
   text-align: center; }
 
 #container {
-  margin: auto;
+  width: 75%;
+  margin: 0 auto;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 1;
   transition: opacity ease-out 2s 2s;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 600px;
+  height: 700px;
   box-shadow: 10px 10px 20px grey; }
 
 #price {
   text-align: right;
-  margin-right: 5%; }
+  margin-right: 5%;
+  width: 100%; }
 
 #order-complete {
   visibility: hidden;
@@ -78,15 +76,15 @@ p.required {
 .order-form {
   display: flex;
   width: 50%;
-  margin: 0 auto;
-  flex-direction: column;
+  flex-wrap: wrap;
   background: whitesmoke; }
   .order-form:nth-of-type(2) {
     background: white; }
-
-.order-form:nth-child(3) p {
-  width: 90%;
-  margin: 0 auto; }
+    .order-form:nth-of-type(2) fieldset {
+      width: 100%; }
+      .order-form:nth-of-type(2) fieldset:nth-of-type(1) input, .order-form:nth-of-type(2) fieldset:nth-of-type(1) select, .order-form:nth-of-type(2) fieldset:nth-of-type(2) input, .order-form:nth-of-type(2) fieldset:nth-of-type(2) select {
+        width: 90%;
+        margin: .5rem; }
 
 .shippingInfo:nth-of-type(1), .shippingInfo:nth-of-type(2) {
   margin: 0 auto;
@@ -98,7 +96,6 @@ p.required {
 .info:nth-of-type(1), .info:nth-of-type(2) {
   display: flex;
   margin: 0 auto;
-  margin-bottom: 20px;
   flex-wrap: wrap;
   width: 90%;
   padding: 0.2rem; }
@@ -150,7 +147,4 @@ p.required {
   width: 10rem;
   height: 2rem;
   margin: 0 auto;
-  display: block;
-  position: absolute;
-  left: 770px;
-  bottom: 30px; }
+  display: block; }

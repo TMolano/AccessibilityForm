@@ -6,15 +6,21 @@ body {
 }
 
 h1 {
+  margin: 0 auto;
   text-align: center;
+  width: 100%;
+  display: block;
+  height: fit-content;
 }
 
 h2 {
   margin: 5%;
+  width: 100%;
+  height: fit-content;
 }
 
 h3 {
-
+  width: 100%;
 }
 
 div {
@@ -26,42 +32,13 @@ div {
 fieldset {
   width: 85%;
   margin: 0 auto;
+  height: fit-content;
+
 }
 
 form {
-  width: 90%;
-  height: 100%;
-  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-
-  input:valid{
-    border: 2px solid green;
-  }
-
-
-  input, select {
-    width: 90%;
-    margin: 5px;
-  }
-
-  input:nth-child(10){
-    width: 50%;
-
-  }
-  select:nth-child(12){
-    width: 50%;
-
-  }
-  input:nth-child(14){
-    width: 50%;
-
-  }
-
-  select:nth-child(16){
-    width: 50%;
-
-  }
+  margin: 0 auto;
 
 }
 
@@ -72,6 +49,9 @@ label.required::before, p.required::before {
 }
 
 p.required{
+  height: fit-content;
+  margin: 0 auto;
+  width: 100%;
   font-style: italic;
   text-align: center;
 }
