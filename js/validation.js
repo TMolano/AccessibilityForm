@@ -54,12 +54,12 @@ submitted.addEventListener("click", (event) => {
     let validateZip = new checkValidity(validZip, "text");
 
 
-<<<<<<< HEAD
+
     let errorName = validateName.getMessages();
-=======
+
     let errorMessages = validateName.getMessages();
     event.preventDefault();
->>>>>>> 827e4ac7e1efe37ba9716be25e7c674403e0aed2
+
 
     if(errorName.length > 0) {
 
