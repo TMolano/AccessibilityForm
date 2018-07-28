@@ -130,17 +130,21 @@ p.required {
   display: flex;
   justify-content: space-evenly; }
   #color label:nth-child(2) {
-    width: 10%;
-    background: red; }
+    width: 20%;
+    background: red;
+    color: red; }
   #color label:nth-child(4) {
-    width: 10%;
-    background: blue; }
+    width: 20%;
+    background: blue;
+    color: blue; }
   #color label:nth-child(6) {
-    width: 10%;
-    background: green; }
+    width: 20%;
+    background: green;
+    color: green; }
   #color label:nth-child(8) {
-    width: 10%;
-    background: black; }
+    width: 20%;
+    background: black;
+    color: black; }
 
 #submit-order {
   background: lightgreen;

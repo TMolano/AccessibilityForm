@@ -47,6 +47,9 @@ class checkValidity {
 
 submitted.addEventListener("click", (event) => {
 
+    event.preventDefault();
+
+
     let validateName = new checkValidity(validName, "text");
     let validateEmail = new checkValidity(validEmail, "text");
     let validateCity = new checkValidity(validCity, "text");
@@ -56,9 +59,6 @@ submitted.addEventListener("click", (event) => {
 
 
     let errorName = validateName.getMessages();
-
-    let errorMessages = validateName.getMessages();
-    event.preventDefault();
 
 
     if(errorName.length > 0) {
@@ -78,6 +78,7 @@ submitted.addEventListener("click", (event) => {
 
         })
     }
+
     else{
         form.addEventListener("submit", (event) => {
             event.preventDefault();
