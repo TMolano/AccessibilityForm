@@ -49,7 +49,7 @@ class checkValidity {
 
 submitted.addEventListener("click", (event) => {
 
-//event.preventDefault();
+
 
     let validateName = new checkValidity(validName, "text");
     let validateEmail = new checkValidity(validEmail, "text");
@@ -127,7 +127,8 @@ submitted.addEventListener("click", (event) => {
 
     else{
         form.addEventListener("submit", (event) => {
-            event.preventDefault();
+
+
 
         })
     }
