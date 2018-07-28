@@ -2,6 +2,7 @@ const submitted = document.querySelector('#submit-order');
 const validEmail = document.querySelector('#email');
 const validName = document.querySelector('#fullname');
 const validAddress = document.querySelector('#address');
+const validAddress2 = document.querySelector('#address2');
 const validCity = document.querySelector('#city');
 const validZip = document.querySelector('#zip');
 
@@ -31,6 +32,7 @@ class checkValidity {
             this.addError('Entry does not match the field pattern')
         }
 
+
         if(status.tooShort){
 
             this.addError('Entry is too short')
@@ -47,13 +49,13 @@ class checkValidity {
 
 submitted.addEventListener("click", (event) => {
 
-    event.preventDefault();
-
+//event.preventDefault();
 
     let validateName = new checkValidity(validName, "text");
     let validateEmail = new checkValidity(validEmail, "text");
     let validateCity = new checkValidity(validCity, "text");
     let validateAddress = new checkValidity(validAddress, "text");
+    let validateAddress2 = new checkValidity(validAddress2, "text");
     let validateZip = new checkValidity(validZip, "text");
 
 
@@ -65,6 +67,50 @@ submitted.addEventListener("click", (event) => {
 
         errorName.forEach((error) => {
             validName.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>');
+
+        })
+    }
+
+    let errorEmail = validateEmail.getMessages();
+
+
+    if(errorEmail.length > 0) {
+
+        errorEmail.forEach((error) => {
+            validEmail.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>');
+
+        })
+    }
+
+    let errorCity = validateCity.getMessages();
+
+
+    if(errorCity.length > 0) {
+
+        errorCity.forEach((error) => {
+            validCity.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>');
+
+        })
+    }
+
+    let errorAddress = validateAddress.getMessages();
+
+
+    if(errorAddress.length > 0) {
+
+        errorAddress.forEach((error) => {
+            validEmail.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>');
+
+        })
+    }
+
+    let errorAddress2 = validateAddress2.getMessages();
+
+
+    if(errorAddress2.length > 0) {
+
+        errorAddress2.forEach((error) => {
+            validAddress2.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>');
 
         })
     }
